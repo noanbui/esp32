@@ -1,0 +1,117 @@
+espcoredump.py v0.1-dev
+===============================================================
+==================== ESP32 CORE DUMP START ====================
+
+================== CURRENT THREAD REGISTERS ===================
+pc             0x400d1fd0	0x400d1fd0 <esp_vApplicationIdleHook+48>
+lbeg           0x0	0
+lend           0x0	0
+lcount         0x0	0
+sar            0x0	0
+ps             0x60520	394528
+threadptr      <unavailable>
+br             <unavailable>
+scompare1      <unavailable>
+acclo          <unavailable>
+acchi          <unavailable>
+m0             <unavailable>
+m1             <unavailable>
+m2             <unavailable>
+m3             <unavailable>
+expstate       <unavailable>
+f64r_lo        <unavailable>
+f64r_hi        <unavailable>
+f64s           <unavailable>
+fcr            <unavailable>
+fsr            <unavailable>
+a0             0x400878e0	1074297056
+a1             0x3ffd6730	1073571632
+a2             0x20	32
+a3             0x1	1
+a4             0x20	32
+a5             0x3ffc388c	1073494156
+a6             0x3ffc63dc	1073505244
+a7             0x3ffc6180	1073504640
+a8             0x3ffc38c8	1073494216
+a9             0x3ffd6710	1073571600
+a10            0x0	0
+a11            0x40082e40	1074277952
+a12            0x0	0
+a13            0x1	1
+a14            0xabab	43947
+a15            0x60023	393251
+
+==================== CURRENT THREAD STACK =====================
+#0  0x400d1fd0 in esp_vApplicationIdleHook () at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/esp32/freertos_hooks.c:62
+#1  0x400878e0 in prvIdleTask (pvParameters=<optimized out>) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/tasks.c:3409
+
+======================== THREADS INFO =========================
+  Id   Target Id         Frame 
+  12   process 11        0x40088c80 in xQueueGenericReceive (xQueue=0x3ffd7b80, pvBuffer=0x3ffd9320, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  11   process 10        0x40088c80 in xQueueGenericReceive (xQueue=0x3ffd2f68, pvBuffer=0x3ffe74d0, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  10   process 9         0x40088c80 in xQueueGenericReceive (xQueue=0x3ffd0d34, pvBuffer=0x0, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  9    process 8         0x40088c80 in xQueueGenericReceive (xQueue=0x3ffdcdd4, pvBuffer=0x3ffde3d0, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  8    process 7         0x40081c0e in esp_crosscore_int_send_yield (core_id=1) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/esp32/crosscore_int.c:112
+  7    process 6         0x40088c80 in xQueueGenericReceive (xQueue=0x3ffd2254, pvBuffer=0x0, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  6    process 5         0x40088c80 in xQueueGenericReceive (xQueue=0x3ffd2830, pvBuffer=0x0, xTicksToWait=4294967295, xJustPeeking=0) at C:/msys32/home/bui.van.thuc/esp/esp-idf/components/freertos/queue.c:1591
+  5    process 4         0x40081c0e in esp_crosscore_int_send_yield (/builds/idf/crosstool-NG/.build/src/gdb-7.10/gdb/inline-frame.c:171: internal-error: inline_frame_this_id: Assertion `!frame_id_eq (*this_id, outer_frame_id)' failed.
+A problem internal to GDB has been detected,
+further debugging may prove unreliable.
+Quit this debugging session? (y or n) [answered Y; input not from terminal]
+/builds/idf/crosstool-NG/.build/src/gdb-7.10/gdb/inline-frame.c:171: internal-error: inline_frame_this_id: Assertion `!frame_id_eq (*this_id, outer_frame_id)' failed.
+A problem internal to GDB has been detected,
+further debugging may prove unreliable.
+Create a core file of GDB? (y or n) [answered Y; input not from terminal]
+GDB exited (None / )!
+Problem occured! GDB exited, restart it.
+Reading symbols from build/user_main.elf...done.
+[New <main task>]
+[New process 1]
+[New process 2]
+[New process 3]
+[New process 4]
+[New process 5]
+[New process 6]
+[New process 7]
+[New process 8]
+[New process 9]
+[New process 10]
+[New process 11]
+[Current thread is 1 (<main task>)]
+
+======================= ALL MEMORY REGIONS ========================
+Name   Address   Size   Attrs
+.rtc.text 0x400c0000 0x0 RW  
+.iram0.vectors 0x40080000 0x400 R XA
+.iram0.text 0x40080400 0x143ec R XA
+.dram0.data 0x3ffc0000 0x2da4 RW A
+.flash.rodata 0x3f400020 0x111c0 RW A
+.flash.text 0x400d0018 0x625c0 R XA
+.coredump.tasks 0x3ffd67f4 0x17c RW 
+.coredump.tasks 0x3ffd6670 0x17c RW 
+.coredump.tasks 0x3ffd44ec 0x17c RW 
+.coredump.tasks 0x3ffd4230 0x2b4 RW 
+.coredump.tasks 0x3ffd3058 0x17c RW 
+.coredump.tasks 0x3ffe52b0 0x1fc RW 
+.coredump.tasks 0x3ffdc8e4 0x17c RW 
+.coredump.tasks 0x3ffdc6f0 0x1ec RW 
+.coredump.tasks 0x3ffd7270 0x17c RW 
+.coredump.tasks 0x3ffd70f0 0x178 RW 
+.coredump.tasks 0x3ffd2c8c 0x17c RW 
+.coredump.tasks 0x3ffd2b00 0x184 RW 
+.coredump.tasks 0x3ffd26b0 0x17c RW 
+.coredump.tasks 0x3ffd2520 0x188 RW 
+.coredump.tasks 0x3ffe3544 0x17c RW 
+.coredump.tasks 0x3ffe3380 0x1bc RW 
+.coredump.tasks 0x3ffde470 0x17c RW 
+.coredump.tasks 0x3ffde2c0 0x1a8 RW 
+.coredump.tasks 0x3ffd1f90 0x17c RW 
+.coredump.tasks 0x3ffd1e00 0x188 RW 
+.coredump.tasks 0x3ffe756c 0x17c RW 
+.coredump.tasks 0x3ffe73b0 0x1b4 RW 
+.coredump.tasks 0x3ffd93dc 0x17c RW 
+.coredump.tasks 0x3ffd9220 0x1b4 RW 
+
+===================== ESP32 CORE DUMP END =====================
+===============================================================
+Done!
